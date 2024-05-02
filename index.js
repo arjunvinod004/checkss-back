@@ -1,6 +1,7 @@
 const express= require('express');
 const cors= require('cors');
 const app = express();
+const port = process.env.Port || 8000
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -37,6 +38,6 @@ fetch('https://coinoneglobal.in/TERESA_PRD/webapplog.asmx/FnGetUserLogIn?PrmUser
 
 
 app.listen(8000,function(){
-console.log('connected😊');
+console.log(`${port}`);
 })
 
